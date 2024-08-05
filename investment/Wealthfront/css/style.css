@@ -1,0 +1,240 @@
+/* Reset and basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.scroll-button {
+  padding: 2px;
+  font-size: 16px;
+  cursor: pointer;
+ 
+  color: white; /* Initial color */
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+.scroll-button:visited {
+  color: white; /* Color for visited links */
+}
+.scroll-button:hover {
+  background-color: #1e50b3;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 100px; /* Ensure space for footer */
+  position: relative; /* Ensure relative positioning */
+  transition: background-color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 20px;
+
+}
+
+.money-divider {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.investment-section {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.investment-section:hover {
+  transform: translateY(-5px);
+}
+
+.investment-section h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.investment-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.text-space {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#investment-chart {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.text-space h2 {
+  font-size: 1.8rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.text-space p {
+  font-size: 1.4rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #222;
+  
+}
+
+.money-divider .investment-section {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+
+
+
+#investment-chart {
+  background-color: #ffffff;
+}
+
+
+
+input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+button:hover {
+  background-color: #007bff;
+}
+
+
+
+/* Toggle switch for dark mode */
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/* Fixed footer */
+footer {
+ 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  display: block; /* Always visible */
+}
+body {
+  margin-bottom: 0; /* Ensure no extra margin */
+}
+
+.container {
+  padding-bottom: 0; /* Ensure no extra padding */
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Your CIBIL Score</title>
+    <link rel="stylesheet" href="cibil.css">
+    <link rel="shortcut icon" href="/hacky/Monances/images/logo.svg" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            <div id="google_translate_element" style="position: fixed; top: 40px; right: 90px;"></div>
+
+                            <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                             new google.translate.TranslateElement({pageLanguage: 'en',includedLanguages: 'hi,gu,kn,ml,mr,ta,te,bn,pa,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                }
+                            </script>
+                            <style>
+                                #google_translate_element {
+                                    zoom: 0.75; /* Increase this value to make the widget larger */
+                                    
+                                    transform: scale(1.5); /* Standard property */
+                                    transform-origin: 0 0;
+                                }
+                                
+                                body {
+                                    top: 0px !important;
+                                }
+                            </style>
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </div>
+     <br> <br> <br> <br> <br><br> 
+            <br> 
+            <h1>Check Your CIBIL Score</h1>
+            <BR>
+            <p>Enter your PAN number to get your CIBIL score and see if you need to take any actions.</p>
+       <BR>
+        </header>
+        <div class="content">
+            <div class="score-info">
+                <table class="score-table">
+                    <thead>
+                        <tr>
+                            <th>Score Range</th>
+                            <th>Level</th>
+                            <th>Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>300-499</td>
+                            <td>Red</td>
+                            <td><span class="info-icon" data-info="Poor score, high risk">i</span></td>
+                        </tr>
+                        <tr>
+                            <td>500-699</td>
+                            <td>Yellow</td>
+                            <td><span class="info-icon" data-info="Fair score, moderate risk">i</span></td>
+                        </tr>
+                        <tr>
+                            <td>700-900</td>
+                            <td>Green</td>
+                            <td><span class="info-icon" data-info="Good score, low risk">i</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="chart-container">
+                <div class="form-group">
+                    <label for="pan">Enter PAN Number:</label>
+                    <input type="text" id="pan" placeholder="Enter PAN number...">
+                    <button id="calculateBtn">Calculate Score</button>
+                </div>
+                <div class="result" id="result"></div>
+                <canvas id="cibilChart"></canvas>
+            </div>
+        </div>
+    <div>
+    <footer>
+        <button onclick="goToDashboard()">Go to Dashboard</button>
+        <button onclick="goToAbout()">About</button>
+        <button onclick="goToContact()">Contact</button>
+    </footer></div></div>
+    <script src="cibil.js" defer></script>
+</body>
+</html>
